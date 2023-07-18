@@ -11,6 +11,7 @@
     <?php
     
     //if, if.else
+    
     echo "<h1>if, if.else</h1><br>";
 
     if ($a > $b) {
@@ -20,13 +21,45 @@
     } else {
         echo "a es menor que b";
     }
-
-    //
+    
+    // ejemplo del profe 
+    echo "<h1>if</h1><br>";
+    $color ="rojo";
+    if($color="rojo")
+    {
+        print("Efectivamente, el color es rojo ");
+    }
+    //ejemplo 2
+    $x=10;
+    $y=15;
+    if($x == $y)
+    {
+        print("x e y son iguales");
+    }
+    elseif($x > $y)
+    {
+        print("x es mayor que y");
+    }
+    elseif( $x < $y)
+    {
+        print("x es menor que y");
+    }
+    
     
 
-
      //while
+     // indica que mientras no se cumpla una determinada condición, no se saldrá del bucle y no 
+     //saltará a la asiguiente linea de código.
      echo "<h1>while</h1><br>";
+     $x =10;
+     while(--$x)
+     {
+        echo"<big>";
+        echo"<b>";
+        print("Número:".$x)
+        echo "<br>";
+        echo "<hr>";
+     }
 
 
 
@@ -61,31 +94,36 @@
     }
 
      //require
+     // sirve para incluir archivos en nuestras pagínas y solo será necesario hacer referencia 
+     // a este archivo con la instrucion requiere. Se usa prinipalmente para definir variables,
+     // y estas estarán listas una vez  hagamos una llamada al archivo donde esten guardadas.
+
+     // include
+     //El funcionamiento es igual que el de la instruccion requiere(), con la diferencia de que si 
+     //puede procesar el código tanra veces como la llamemos a esa pagina externa.
+     include("variable.php");
+     echo "<br>";
+     print("$x"."$z"."$y");
+
+     
      echo "<h1>Require</h1><br>";
 
-     // Función require_once
-    require_once("la_ruta_de_archivo.php");
-    require_once "la_ruta_de_archivo.php";
+     
 
-     // Include_once
-    include_once("la_ruta_de_archivo.php");
-    include_once "la_ruta_de_archivo.php";
-
-    //
-    require('somefile.php');
-
-     //include
-     echo "<h1>Include</h1><br>";
-
-     echo "Una $fruta $color"; // Una
-
-     include 'vars.php';
-
-     echo "Una $fruta $color"; // Una manzana verde
+     //ejemplo del profe
+     // será utilizado para ejecutar un bucle en un determinado númeri de veces, hasta que se cumpla una
+     //condición
+     echo "<br>";
+     echo "<h1>for</h1>"
+     for($x=5;$x=10;$x++)
+     {
+        print("Número: ".$x."<br>")
+     }
 
 
 
      //swich
+     
      echo "<h1>swich</h1><br>";
      if ($i == 0) {
         echo "i es igual a 0";
@@ -106,6 +144,24 @@
             echo "i es igual a 2";
             break;
     }
+
+    // ejemplo del profe
+    // se utiliza para comprobar un dato ente variables posibilidades
+
+    $color ="negro ";
+    switch($color)
+    {
+        case "blanco";
+             $sector ="claro";
+             break;
+        case "naranja";
+             $sector ="normal";
+             break;
+        case "negro";
+             $sector ="oscuro";
+             break;
+    }
+    print($sector);
 
 
     ?>
